@@ -2,7 +2,7 @@
 
 # xWindowsRestore
 
-The **xWindowsRestore** module contains the **xSystemRestore** and **xSystemRestorePoint** for managing system restore and system checkpoints on a Windows machine. 
+The **xWindowsRestore** module contains the **xSystemRestore** and **xSystemRestorePoint** for managing system restore and system checkpoints on a Windows machine.
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
@@ -13,26 +13,29 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
 
 ## Resources
 
-* **xSystemRestore** enables or disables system restore on a specified system drive. 
-* **xSystemRestorePoint:** creates and removes system checkpoints. 
+* **xSystemRestore** enables or disables system restore on a specified system drive.
+* **xSystemRestorePoint:** creates and removes system checkpoints.
 
 ### xSystemRestore
 
-* **Drive**: Specifies the file system drives. 
+* **Drive**: Specifies the file system drives.
 Enter one or more file system drive letters, each followed by a colon and a backslash and enclosed in quotation marks, such as 'C:\' or 'D:\'.
 * **Ensure**: Ensures that the system is or is not configured for system restore: { **Present** | **Absent** }
 
 ### xSystemRestorePoint
 
-* **Description**: Descriptive name for the restore point. 
-* **RestorePointType**: The type of restore point. 
-The default is APPLICATION_INSTALL. 
+* **Description**: Descriptive name for the restore point.
+* **RestorePointType**: The type of restore point.
+The default is APPLICATION_INSTALL.
 * **Ensure**: Ensures that the restore point is **Present** or **Absent**.
 
 ## Versions
 
 ### Unreleased
-* Converted appveyor.yml to install Pester from PSGallery instead of from Chocolatey.
+
+* Update appveyor.yml to use the default template.
+* Added default template files .codecov.yml, .gitattributes, and .gitignore, and
+  .vscode folder.
 
 ### 1.0.0.0
 
@@ -40,7 +43,7 @@ The default is APPLICATION_INSTALL.
     - xWindowsRestore
     - xSystemRestorePoint
 
-## Examples 
+## Examples
 
 ### Enable System Restore
 
